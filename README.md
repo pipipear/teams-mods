@@ -1,6 +1,10 @@
 # Teams Mods
 Some modifications to "fix" Microsoft Teams, currently this is only works with Linux though it's not impossible to make it work with Windows
 
+# Features
+- makes the search bar less intrusive
+- adds control + r functionality
+
 # Installing
 ```
 git clone https://github.com/pipipear/teams-mods

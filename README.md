@@ -9,7 +9,7 @@ npm i
 ```
 
 # Usage
-To start _Teams Mods_, type `node .`  
+To start _Teams Mods_, make sure _Microsoft Teams_ isn't running and type `node .`  
 If you intend to launch _Teams Mods_ on startup, disable the _Auto-start application_ option in _Microsoft Teams_
 
 # Todo

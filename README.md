@@ -13,10 +13,9 @@ To start _Teams Mods_, type `node .`
 If you intend to launch _Teams Mods_ on startup, disable the _Auto-start application_ option in _Microsoft Teams_
 
 # Todo
-- [x] Make the search bar less intrusive
+- [x] Add search bar customization
 - [x] Add control + r functionality
 - [x] Add ᐊ Alt ᐅ functionality
 - [x] Add a mods settings GUI
-- [x] Add header bar customization
 - [ ] Reload mods when switching organizations
 - [ ] Add windows support 

@@ -11,7 +11,7 @@ var menu = document.createElement('div');
 menu.classList.add('app-bar-link');
 menu.innerHTML = `
 <button id="mod-menu-toggle" class="discover-apps-button" style="padding: 0px">
-<img draggable="false" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAA4CAQAAADu+paDAAAAkUlEQVRYw+3VMQrDMAyFYckEOqTHCKFbTtNb9iydS3uNZAi0qHtBJjyM6fB/q3i2MLZlBgAAAOAQV0JxskuSDHv43q37WCK3aGsWKeVirWKQUqvd0w03rRE08T+XtYi15rF3pfbRGsEv7Yuf7JYWr/5S1tQ+tLPlb2PUTkS7rCHWKtTpO6fT99lx+gIAAAAdfQESsEqTv2DSfwAAAABJRU5ErkJggg==">
+<img draggable="false" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAA4BAMAAAC23UM7AAAAGFBMVEVHcEz///////////////////////////8dS1W+AAAAB3RSTlMALjDO0AckobroiwAAAERJREFUOMtjYBgFo2CEgEAlMAjAo0S8HAwE8ChRhyhRwKMk2RgMEmjuI+o4lwhTqANSXMAggebODRQEg4DRND8KhgUAAH4rG705sX6eAAAAAElFTkSuQmCC">
 </button>
 <div id="mod-menu" class="popover mod-menu-hide" tabindex="0" style="position: fixed; padding: 20px; left: 76px; top: unset; bottom: 8px; display: unset; background-color: #464775; color: white; transition: 200ms; z-index: 2147483647;">
 <center>Teams Mods</center>

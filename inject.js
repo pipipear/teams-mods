@@ -11,7 +11,7 @@ var menu = document.createElement('div');
 menu.classList.add('app-bar-link');
 menu.innerHTML = `
 <button id="mod-menu-toggle" class="discover-apps-button" style="padding: 0px">
-<img draggable="false" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAA4BAMAAAC23UM7AAAAGFBMVEVHcEz///////////////////////////8dS1W+AAAAB3RSTlMALjDO0AckobroiwAAAERJREFUOMtjYBgFo2CEgEAlMAjAo0S8HAwE8ChRhyhRwKMk2RgMEmjuI+o4lwhTqANSXMAggebODRQEg4DRND8KhgUAAH4rG705sX6eAAAAAElFTkSuQmCC">
+<img draggable="false" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAA4AgMAAAA5nbabAAAADFBMVEVHcEz///////////8Gn9AKAAAAA3RSTlMALs/6qhLTAAAANElEQVQoz2NgGAUDChhDQ0NRRdj////vQECEbdWqVQ4k20WMyZgixABM9xBjMqbfRwGNAQDXkh1liBgRFQAAAABJRU5ErkJggg">
 </button>
 <div id="mod-menu" class="popover mod-menu-hide" tabindex="0" style="position: fixed; padding: 20px; left: 76px; top: unset; bottom: 8px; display: unset; background-color: #464775; color: white; transition: 200ms; z-index: 2147483647;">
 <center>Teams Mods</center>

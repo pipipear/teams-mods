@@ -18,4 +18,5 @@ If you intend to launch _Teams Mods_ on startup, disable the _Auto-start applica
 - [x] Add ᐊ Alt ᐅ functionality
 - [x] Add a mods settings GUI
 - [ ] Reload mods when switching organizations
-- [ ] Add windows support 
+- [ ] Add windows support
+- [ ] CSS for menu checkboxes

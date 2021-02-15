@@ -16,20 +16,20 @@ menu.innerHTML = `
 <div id="mod-menu" class="popover mod-menu-hide" tabindex="0" style="position: fixed; padding: 20px; left: 76px; top: unset; bottom: 8px; display: unset; background-color: #464775; color: white; transition: 200ms; z-index: 2147483647;">
 <center>Teams Mods</center>
 <hr style="margin-top: 10px; margin-bottom: 10px;">
-<label><input id="mod-menu-option-smallsearch" style="vertical-align: top;" type="checkbox"><span>&nbsp;&nbsp;&nbsp;&nbsp;Small search bar</span></label>
+<label><input id="mod-menu-option-smallsearch" style="vertical-align: top;" type="checkbox" tabindex="-1"><span>&nbsp;&nbsp;&nbsp;&nbsp;Small search bar</span></label>
 <hr style="margin-top: 10px; margin-bottom: 10px;">
-<label><input id="mod-menu-option-nosearch" style="vertical-align: top;" type="checkbox"><span>&nbsp;&nbsp;&nbsp;&nbsp;Remove search bar</span></label>
+<label><input id="mod-menu-option-nosearch" style="vertical-align: top;" type="checkbox" tabindex="-1"><span>&nbsp;&nbsp;&nbsp;&nbsp;Remove search bar</span></label>
 <hr style="margin-top: 10px; margin-bottom: 10px;">
-<label><input id="mod-menu-option-keyreload" style="vertical-align: top;" type="checkbox"><span>&nbsp;&nbsp;&nbsp;&nbsp;Reload with Ctrl+R</span></label>
+<label><input id="mod-menu-option-keyreload" style="vertical-align: top;" type="checkbox" tabindex="-1"><span>&nbsp;&nbsp;&nbsp;&nbsp;Reload with Ctrl+R</span></label>
 <hr style="margin-top: 10px; margin-bottom: 10px;">
-<label><input id="mod-menu-option-keynavigate" style="vertical-align: top;" type="checkbox"><span>&nbsp;&nbsp;&nbsp;&nbsp;Navigate with ᐊ Alt ᐅ</span></label>
+<label><input id="mod-menu-option-keynavigate" style="vertical-align: top;" type="checkbox" tabindex="-1"><span>&nbsp;&nbsp;&nbsp;&nbsp;Navigate with ᐊ Alt ᐅ</span></label>
 <hr style="margin-top: 10px; margin-bottom: 10px;">
 <center><a style="color: #a6a7dc" href="https://github.com/pipipear/teams-mods" rel="noreferrer noopener" target="_blank" tabindex="-1">Github - pipipear</a></center>
 </div>`;
 target.parentNode.insertBefore(menu, target);
 
 
-visual_mods()
+visual_mods();
 function visual_mods() {
   if (localStorage['mods.smallsearch'] === 'true') {
     document.querySelector('#mod-menu-option-smallsearch').checked = true;
@@ -66,21 +66,27 @@ function visual_mods() {
 document.querySelector('#mod-menu-toggle').onclick = () => {
   document.querySelector('#mod-menu').classList.toggle('mod-menu-hide');
   document.querySelector('#mod-menu').focus();
-}
+};
 document.querySelector('#mod-menu').onblur = () => {
   setTimeout(() => {
     if (document.activeElement.parentElement.parentElement == document.querySelector('#mod-menu')) {
       document.querySelector('#mod-menu').focus();
-    } else if (document.activeElement.parentElement == document.querySelector('#mod-menu').parentElement) {} else {
+    } else if (document.activeElement.parentElement == document.querySelector('#mod-menu').parentElement) { } else {
       document.querySelector('#mod-menu').classList.add('mod-menu-hide');
     }
-  }, 1)
-}
+  }, 1);
+};
+document.querySelector('#mod-menu').addEventListener('keydown', (e) => {
+  if (e.key = 'Escape') {
+    document.querySelector('#mod-menu').blur();
+    document.body.classList.remove('acc-keyboard-mode')
+  }
+});
 
-document.querySelector('#mod-menu-option-smallsearch').onchange = () => { topt('smallsearch') }
-document.querySelector('#mod-menu-option-nosearch').onchange = () => { topt('nosearch') }
-document.querySelector('#mod-menu-option-keyreload').onchange = () => { topt('keyreload') }
-document.querySelector('#mod-menu-option-keynavigate').onchange = () => { topt('keynavigate') }
+document.querySelector('#mod-menu-option-smallsearch').onchange = () => { topt('smallsearch'); };
+document.querySelector('#mod-menu-option-nosearch').onchange = () => { topt('nosearch'); };
+document.querySelector('#mod-menu-option-keyreload').onchange = () => { topt('keyreload'); };
+document.querySelector('#mod-menu-option-keynavigate').onchange = () => { topt('keynavigate'); };
 
 function topt(id) {
   localStorage[`mods.${id}`] = document.querySelector(`#mod-menu-option-${id}`).checked;
@@ -93,13 +99,13 @@ document.addEventListener('keydown', (e) => {
     location.reload();
   }
   if (localStorage['mods.keynavigate'] == 'true' && e.key == 'ArrowLeft' && e.altKey) {
-    document.activeElement.blur()
-    console.log('back')
+    document.activeElement.blur();
+    console.log('back');
     document.querySelector('#navigation-buttons').children[0].click();
   }
   if (localStorage['mods.keynavigate'] == 'true' && e.key == 'ArrowRight' && e.altKey) {
-    document.activeElement.blur()
-    console.log('foward')
+    document.activeElement.blur();
+    console.log('foward');
     document.querySelector('#navigation-buttons').children[1].click();
   }
 });

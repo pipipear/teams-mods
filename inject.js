@@ -102,10 +102,12 @@ document.addEventListener('keydown', (e) => {
     document.activeElement.blur();
     console.log('back');
     document.querySelector('#navigation-buttons').children[0].click();
+    document.body.classList.remove('acc-keyboard-mode')
   }
   if (localStorage['mods.keynavigate'] == 'true' && e.key == 'ArrowRight' && e.altKey) {
     document.activeElement.blur();
     console.log('foward');
     document.querySelector('#navigation-buttons').children[1].click();
+    document.body.classList.remove('acc-keyboard-mode')
   }
 });

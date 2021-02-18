@@ -71,7 +71,7 @@ document.querySelector('#mod-menu').onblur = () => {
   setTimeout(() => {
     if (document.activeElement.parentElement.parentElement == document.querySelector('#mod-menu')) {
       document.querySelector('#mod-menu').focus();
-    } else if (document.activeElement.parentElement == document.querySelector('#mod-menu').parentElement) { } else {
+    } else if (document.activeElement.parentElement == document.querySelector('#mod-menu').parentElement) {} else {
       document.querySelector('#mod-menu').classList.add('mod-menu-hide');
     }
   }, 1);
@@ -79,14 +79,14 @@ document.querySelector('#mod-menu').onblur = () => {
 document.querySelector('#mod-menu').addEventListener('keydown', (e) => {
   if (e.key = 'Escape') {
     document.querySelector('#mod-menu').blur();
-    document.body.classList.remove('acc-keyboard-mode')
+    document.body.classList.remove('acc-keyboard-mode');
   }
 });
 
-document.querySelector('#mod-menu-option-smallsearch').onchange = () => { topt('smallsearch'); };
-document.querySelector('#mod-menu-option-nosearch').onchange = () => { topt('nosearch'); };
-document.querySelector('#mod-menu-option-keyreload').onchange = () => { topt('keyreload'); };
-document.querySelector('#mod-menu-option-keynavigate').onchange = () => { topt('keynavigate'); };
+document.querySelector('#mod-menu-option-smallsearch').onchange = () => {topt('smallsearch');};
+document.querySelector('#mod-menu-option-nosearch').onchange = () => {topt('nosearch');};
+document.querySelector('#mod-menu-option-keyreload').onchange = () => {topt('keyreload');};
+document.querySelector('#mod-menu-option-keynavigate').onchange = () => {topt('keynavigate');};
 
 function topt(id) {
   localStorage[`mods.${id}`] = document.querySelector(`#mod-menu-option-${id}`).checked;
@@ -102,12 +102,12 @@ document.addEventListener('keydown', (e) => {
     document.activeElement.blur();
     console.log('back');
     document.querySelector('#navigation-buttons').children[0].click();
-    document.body.classList.remove('acc-keyboard-mode')
+    document.body.classList.remove('acc-keyboard-mode');
   }
   if (localStorage['mods.keynavigate'] == 'true' && e.key == 'ArrowRight' && e.altKey) {
     document.activeElement.blur();
     console.log('foward');
     document.querySelector('#navigation-buttons').children[1].click();
-    document.body.classList.remove('acc-keyboard-mode')
+    document.body.classList.remove('acc-keyboard-mode');
   }
 });

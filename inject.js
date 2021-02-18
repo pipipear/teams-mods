@@ -4,7 +4,7 @@ if (localStorage['mods.keyreload'] === undefined) localStorage['mods.keyreload']
 if (localStorage['mods.keynavigate'] === undefined) localStorage['mods.keynavigate'] = 'false';
 
 var style = document.createElement('style');
-style.innerHTML = '.popover-left-rail .left-rail-z-index { z-index: 2147483646 } .mod-menu-hide { opacity: 0; pointer-events: none; } .mod-smallsearch { position: fixed; top: 9px; left: 68px; z-index: 500 } .mod-hide { display: none }';
+style.innerHTML = '.popover-left-rail .left-rail-z-index { z-index: 2147483646 } .mod-menu-hide { opacity: 0; pointer-events: none; } .mod-smallsearch { position: fixed; top: 9px; left: 68px; z-index: 9999 } .mod-hide { display: none }';
 document.getElementsByTagName('head')[0].appendChild(style);
 var target = document.querySelector('.app-list-item');
 var menu = document.createElement('div');

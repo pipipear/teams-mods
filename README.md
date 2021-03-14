@@ -21,4 +21,3 @@ If you intend to launch _Teams Mods_ on startup, disable the _Auto-start applica
 - [ ] Add windows support
 - [ ] CSS for menu checkboxes
 - [ ] Add deafen button
-- [ ] Fix close button

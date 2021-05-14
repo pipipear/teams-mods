@@ -1,3 +1,6 @@
+# Important
+This repository has been archived because of the unreliability of injecting code through remote debugging ports
+
 # Teams Mods
 Some modifications to "fix" Microsoft Teams, currently this is only works with Linux though it's not impossible to make it work with Windows
 
